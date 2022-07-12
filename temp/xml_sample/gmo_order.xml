@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZORDERS05EXT>
+  <IDOC>
+    <EDI_DC40 SEGMENT="1">
+      <TABNAM></TABNAM>
+      <MANDT></MANDT>
+      <DOCNUM></DOCNUM>
+      <DOCREL></DOCREL>
+      <STATUS></STATUS>
+      <DIRECT></DIRECT>
+      <OUTMOD></OUTMOD>
+      <IDOCTYP></IDOCTYP>
+      <CIMTYP></CIMTYP>
+      <MESTYP></MESTYP>
+      <MESCOD></MESCOD>
+      <MESFCT></MESFCT>
+      <SNDPOR></SNDPOR>
+      <SNDPRT></SNDPRT>
+      <SNDPRN></SNDPRN>
+      <RCVPOR></RCVPOR>
+      <RCVPRT></RCVPRT>
+      <RCVPFC></RCVPFC>
+      <RCVPRN></RCVPRN>
+      <CREDAT></CREDAT>
+      <CRETIM></CRETIM>
+      <SERIAL></SERIAL>
+    </EDI_DC40>
+    <E1EDK01 SEGMENT="1">
+      <CURCY></CURCY>
+      <HWAER></HWAER>
+      <WKURS></WKURS>
+      <ZTERM></ZTERM>
+      <BSART></BSART>
+      <BELNR></BELNR>
+      <RECIPNT_NO></RECIPNT_NO>
+    </E1EDK01>
+    <E1EDK14 SEGMENT="1">
+      <QUALF></QUALF>
+      <ORGID></ORGID>
+    </E1EDK14>
+    <E1EDK14 SEGMENT="1">
+      <QUALF></QUALF>
+      <ORGID></ORGID>
+    </E1EDK14>
+    <E1EDK14 SEGMENT="1">
+      <QUALF></QUALF>
+      <ORGID></ORGID>
+    </E1EDK14>
+    <E1EDK14 SEGMENT="1">
+      <QUALF></QUALF>
+      <ORGID></ORGID>
+    </E1EDK14>
+    <E1EDK03 SEGMENT="1">
+      <IDDAT></IDDAT>
+      <DATUM></DATUM>
+    </E1EDK03>
+    <E1EDK03 SEGMENT="1">
+      <IDDAT></IDDAT>
+      <DATUM></DATUM>
+    </E1EDK03>
+    <E1EDK03 SEGMENT="1">
+      <IDDAT></IDDAT>
+      <DATUM></DATUM>
+    </E1EDK03>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW></PARVW>
+      <PARTN></PARTN>
+      <TELF1></TELF1>
+      <BNAME></BNAME>
+      <PAORG></PAORG>
+      <ORGTX></ORGTX>
+      <PAGRU></PAGRU>
+    </E1EDKA1>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW></PARVW>
+      <PARTN></PARTN>
+      <SPRAS></SPRAS>
+      <IHREZ></IHREZ>
+      <BNAME></BNAME>
+      <SPRAS_ISO></SPRAS_ISO>
+    </E1EDKA1>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW></PARVW>
+      <PARTN></PARTN>
+    </E1EDKA1>
+    <E1EDKA1 SEGMENT="1">
+      <PARVW></PARVW>
+      <LIFNR></LIFNR>
+      <NAME1></NAME1>
+      <NAME2></NAME2>
+      <STRAS></STRAS>
+      <ORT01></ORT01>
+      <PSTLZ></PSTLZ>
+      <LAND1></LAND1>
+      <SPRAS></SPRAS>
+      <ANRED></ANRED>
+      <ORT02></ORT02>
+      <REGIO></REGIO>
+      <SPRAS_ISO></SPRAS_ISO>
+    </E1EDKA1>
+    <E1EDK02 SEGMENT="1">
+      <QUALF></QUALF>
+      <BELNR></BELNR>
+      <DATUM></DATUM>
+      <UZEIT></UZEIT>
+    </E1EDK02>
+    <E1EDK17 SEGMENT="1">
+      <QUALF></QUALF>
+      <LKOND></LKOND>
+      <LKTEXT></LKTEXT>
+    </E1EDK17>
+    <E1EDK17 SEGMENT="1">
+      <QUALF></QUALF>
+      <LKTEXT></LKTEXT>
+    </E1EDK17>
+    <E1EDK17 SEGMENT="1">
+      <QUALF></QUALF>
+      <LKTEXT></LKTEXT>
+    </E1EDK17>
+    <E1EDK18 SEGMENT="1">
+      <QUALF></QUALF>
+      <TAGE></TAGE>
+    </E1EDK18>
+    <E1EDP01 SEGMENT="1">
+      <POSEX></POSEX>
+      <ACTION></ACTION>
+      <PSTYP></PSTYP>
+      <MENGE></MENGE>
+      <MENEE></MENEE>
+      <BMNG2></BMNG2>
+      <PMENE></PMENE>
+      <PEINH></PEINH>
+      <GEWEI></GEWEI>
+      <MATKL></MATKL>
+      <BPUMN></BPUMN>
+      <BPUMZ></BPUMZ>
+      <WERKS></WERKS>
+      <LGORT></LGORT>
+      <E1CUREF SEGMENT="1">
+        <POSEX></POSEX>
+        <CONFIG_ID></CONFIG_ID>
+        <INST_ID></INST_ID>
+      </E1CUREF>
+      <E1EDP20 SEGMENT="1">
+        <WMENG></WMENG>
+        <AMENG></AMENG>
+        <EDATU></EDATU>
+      </E1EDP20>
+      <E1EDP19 SEGMENT="1">
+        <QUALF></QUALF>
+        <IDTNR></IDTNR>
+        <KTEXT></KTEXT>
+        <IDTNR_LONG></IDTNR_LONG>
+      </E1EDP19>
+      <E1EDP19 SEGMENT="1">
+        <QUALF></QUALF>
+        <IDTNR></IDTNR>
+      </E1EDP19>
+      <E1EDP17 SEGMENT="1">
+        <QUALF></QUALF>
+        <LKOND></LKOND>
+        <LKTEXT></LKTEXT>
+      </E1EDP17>
+      <E1EDP17 SEGMENT="1">
+        <QUALF></QUALF>
+      </E1EDP17>
+      <E1EDP17 SEGMENT="1">
+        <QUALF></QUALF>
+        <LKTEXT></LKTEXT>
+      </E1EDP17>
+    </E1EDP01>
+    <E1EDP01 SEGMENT="1">
+      <POSEX></POSEX>
+      <ACTION></ACTION>
+      <PSTYP></PSTYP>
+      <MENGE></MENGE>
+      <MENEE></MENEE>
+      <BMNG2></BMNG2>
+      <PMENE></PMENE>
+      <VPREI></VPREI>
+      <PEINH></PEINH>
+      <NETWR></NETWR>
+      <GEWEI></GEWEI>
+      <MATKL></MATKL>
+      <BPUMN></BPUMN>
+      <BPUMZ></BPUMZ>
+      <WERKS></WERKS>
+      <LGORT></LGORT>
+      <ZMMXX01>
+        <ESFERA></ESFERA>
+        <CILINDRO></CILINDRO>
+        <EJE></EJE>
+        <OJO></OJO>
+        <DIAMETRO></DIAMETRO>
+        <ADICION></ADICION>
+        <MATERIAL></MATERIAL>
+        <COLOR></COLOR>
+        <MARCA></MARCA>
+        <INDICE></INDICE>
+        <TRANSPARENCIA></TRANSPARENCIA>
+        <TRATAMIENTO></TRATAMIENTO>
+        <TIPO></TIPO>
+        <TIPO_ARMAZON></TIPO_ARMAZON>
+        <PUENTE></PUENTE>
+        <VERTICAL></VERTICAL>
+        <HORIZONTAL></HORIZONTAL>
+        <DIAGONAL></DIAGONAL>
+        <ALTURA></ALTURA>
+        <DIS_NASO_PUP_LEJOS></DIS_NASO_PUP_LEJOS>
+        <DIS_NASO_PUP_CERCA></DIS_NASO_PUP_CERCA>
+        <PACKAGE></PACKAGE>
+        <CURVABASE></CURVABASE>
+        <DESCENTRADO></DESCENTRADO>
+        <DEFECTIVO></DEFECTIVO>
+        <EBORDE></EBORDE>
+        <ECENTRO></ECENTRO>
+        <PRISMA></PRISMA>
+        <ORIENTACION_PRISMA></ORIENTACION_PRISMA>
+        <TENIDO></TENIDO>
+        <CORREDOR></CORREDOR>
+        <PACIENTE></PACIENTE>
+      </ZMMXX01>
+      <ZMMXX01>
+        <ESFERA></ESFERA>
+        <CILINDRO></CILINDRO>
+        <EJE></EJE>
+        <OJO></OJO>
+        <DIAMETRO></DIAMETRO>
+        <ADICION></ADICION>
+        <MATERIAL></MATERIAL>
+        <COLOR></COLOR>
+        <MARCA></MARCA>
+        <INDICE></INDICE>
+        <TRANSPARENCIA></TRANSPARENCIA>
+        <TRATAMIENTO></TRATAMIENTO>
+        <TIPO></TIPO>
+        <TIPO_ARMAZON></TIPO_ARMAZON>
+        <PUENTE></PUENTE>
+        <VERTICAL></VERTICAL>
+        <HORIZONTAL></HORIZONTAL>
+        <DIAGONAL></DIAGONAL>
+        <ALTURA></ALTURA>
+        <DIS_NASO_PUP_LEJOS></DIS_NASO_PUP_LEJOS>
+        <DIS_NASO_PUP_CERCA></DIS_NASO_PUP_CERCA>
+        <PACKAGE></PACKAGE>
+        <CURVABASE></CURVABASE>
+        <DESCENTRADO></DESCENTRADO>
+        <DEFECTIVO></DEFECTIVO>
+        <EBORDE></EBORDE>
+        <ECENTRO></ECENTRO>
+        <PRISMA></PRISMA>
+        <ORIENTACION_PRISMA></ORIENTACION_PRISMA>
+        <TENIDO></TENIDO>
+        <CORREDOR></CORREDOR>
+        <PACIENTE></PACIENTE>
+      </ZMMXX01>
+      <E1EDP20>
+        <WMENG></WMENG>
+        <AMENG></AMENG>
+        <EDATU></EDATU>
+      </E1EDP20>
+      <E1EDP19>
+        <QUALF></QUALF>
+        <IDTNR></IDTNR>
+        <KTEXT></KTEXT>
+        <IDTNR_LONG></IDTNR_LONG>
+      </E1EDP19>
+      <E1EDP19>
+        <QUALF></QUALF>
+        <IDTNR></IDTNR>
+      </E1EDP19>
+      <E1EDP17 SEGMENT="1">
+        <QUALF></QUALF>
+        <LKOND></LKOND>
+        <LKTEXT></LKTEXT>
+      </E1EDP17>
+      <E1EDP17 SEGMENT="1">
+        <QUALF></QUALF>
+      </E1EDP17>
+      <E1EDP17 SEGMENT="1">
+        <QUALF></QUALF>
+        <LKTEXT></LKTEXT>
+      </E1EDP17>
+    </E1EDP01>
+    <E1CUCFG SEGMENT="1">
+      <POSEX></POSEX>
+      <CONFIG_ID></CONFIG_ID>
+      <ROOT_ID></ROOT_ID>
+      <E1CUINS SEGMENT="1">
+        <INST_ID></INST_ID>
+        <OBJ_TYPE></OBJ_TYPE>
+        <CLASS_TYPE></CLASS_TYPE>
+        <OBJ_KEY></OBJ_KEY>
+        <OBJ_TXT></OBJ_TXT>
+        <QUANTITY></QUANTITY>
+      </E1CUINS>
+      <E1CUVAL SEGMENT="1">
+        <INST_ID></INST_ID>
+        <CHARC></CHARC>
+        <CHARC_TXT></CHARC_TXT>
+        <VALUE></VALUE>
+      </E1CUVAL>
+      <E1CUVAL SEGMENT="1">
+        <INST_ID></INST_ID>
+        <CHARC></CHARC>
+        <CHARC_TXT></CHARC_TXT>
+        <VALUE></VALUE>
+        <VALUE_TXT></VALUE_TXT>
+      </E1CUVAL>
+    </E1CUCFG>
+    <E1EDS01 SEGMENT="1">
+      <SUMID></SUMID>
+      <SUMME></SUMME>
+      <SUNIT></SUNIT>
+    </E1EDS01>
+  </IDOC>
+</ZORDERS05EXT>

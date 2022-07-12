@@ -1,0 +1,6 @@
+## Keep environment variables out of version control
+build
+node_modules
+
+## Keep gitkeep files in version control
+!.gitkeep

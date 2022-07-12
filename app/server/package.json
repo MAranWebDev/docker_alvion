@@ -1,0 +1,55 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "@comment scripts": [
+    "nodemon: nodemon needs -L to listen files in docker",
+    "tsc: you need to declare tsc command before using it in the build command",
+    "start: you need to declare env NODE_ENV=production for best performance",
+    "knexfile: needed to find the correct knexfile to run migrations"
+  ],
+  "scripts": {
+    "dev": "nodemon -L src/index.ts",
+    "tsc": "tsc",
+    "build": "rm -rf build && npm run tsc",
+    "start": "NODE_ENV=production node build/index.js",
+    "knexfile": "knex --knexfile src/db/knexfile.ts",
+    "knex:reset": "npm run migrate:rollback && npm run migrate:latest && npm run seed:run",
+    "migrate:make": "npm run knexfile migrate:make",
+    "migrate:rollback": "npm run knexfile migrate:rollback",
+    "migrate:latest": "npm run knexfile migrate:latest",
+    "migrate:list": "npm run knexfile migrate:list",
+    "migrate:up": "npm run knexfile migrate:up",
+    "migrate:down": "npm run knexfile migrate:down",
+    "seed:make": "npm run knexfile seed:make",
+    "seed:run": "npm run knexfile seed:run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "basic-ftp": "^4.6.6",
+    "express": "^4.18.1",
+    "joi": "^17.6.0",
+    "knex": "^2.1.0",
+    "lodash": "^4.17.21",
+    "minify-xml": "^3.4.0",
+    "pg": "^8.7.3",
+    "sanitize-html": "^2.7.0",
+    "ssh2-sftp-client": "^8.1.0",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^18.0.0",
+    "@types/pg": "^8.6.5",
+    "@types/sanitize-html": "^2.6.2",
+    "@types/ssh2-sftp-client": "^7.0.1",
+    "@types/xml2js": "^0.4.11",
+    "nodemon": "^2.0.18",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.4"
+  }
+}

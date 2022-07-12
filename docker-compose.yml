@@ -1,0 +1,101 @@
+volumes:
+  db_data: null # main database volume
+  modules_server: null # fix to prevent host node_modules
+  modules_client: null # fix to prevent host node_modules
+
+services:
+  ## Reverse proxy & Main launcher
+  app:
+    image: nginx:${VER_NGINX}
+    restart: unless-stopped
+    ports:
+      - 80:80
+    volumes:
+      - ./config/nginx_custom.conf:/etc/nginx/conf.d/custom.conf # custom nginx config
+    depends_on:
+      - db
+      - server
+      - client
+
+  ## Database
+  db:
+    image: postgres:${VER_POSTGRES}
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data # main database volume
+      - ./config/postgresql_custom.conf:/etc/postgresql/postgresql.conf # custom postgres config
+    command: postgres -c "config_file=/etc/postgresql/postgresql.conf" # mount custom config
+    environment:
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+
+  ## Backend & API
+  server:
+    build:
+      context: ./ # context needs to be on the root in order to copy files one directory above
+      dockerfile: docker/node_${MODE}.dockerfile
+      args:
+        - SERVICE=server
+        - VERSION=${VER_NODE}
+    deploy:
+      replicas: 1 # for additional replicas
+    restart: unless-stopped
+    expose:
+      - 5000
+    volumes:
+      - modules_server:/usr/src/app/node_modules # fix to prevent host node_modules
+      - /usr/src/app/build # fix to prevent host build folder
+      - ./app/server:/usr/src/app # app folder
+      - ./private:/usr/src/private # private keys folder
+      - ./temp/:/usr/src/temp # temporary files folder
+    env_file: .env
+
+  ## Frontend
+  client:
+    build:
+      context: ./ # context needs to be on the root in order to copy files one directory above
+      dockerfile: docker/node_${MODE}.dockerfile
+      args:
+        - SERVICE=client
+        - VERSION=${VER_NODE}
+    deploy:
+      replicas: 1 # for additional replicas
+    restart: unless-stopped
+    expose:
+      - 3000
+    volumes:
+      - modules_client:/usr/src/app/node_modules # fix to prevent host node_modules
+      - /usr/src/app/.next # fix to prevent host .next folder
+      - ./app/client:/usr/src/app # app folder
+
+  ## Cronjobs alpine linux
+  cron:
+    image: docker:${VER_DOCKER}
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock # mount docker daemon in container
+      - ./app/cron:/cron # scripts folder
+      - ./temp/dumps:/dumps # db dumps folder
+      - ./config/crontab_custom.conf:/etc/crontabs/custom # custom crontab config
+    command: sh -c "crontab /etc/crontabs/custom && crond -l 2 -f" # mount custom config and start crontab log level 2 as foreground process
+    env_file: .env
+
+  ## Devtools server - npm
+  npm-ser:
+    image: node:${VER_NODE}
+    volumes:
+      - ./app/server:/usr/src/app
+    env_file: .env
+    working_dir: /usr/src/app
+    entrypoint: [ 'npm' ]
+
+  ## Devtools client - npm
+  npm-cli:
+    image: node:${VER_NODE}
+    volumes:
+      - ./app/client:/usr/src/app
+    working_dir: /usr/src/app
+    entrypoint: [ 'npm' ]

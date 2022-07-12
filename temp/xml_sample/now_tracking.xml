@@ -1,0 +1,27 @@
+<!-- one file, multiple status -->
+<VW_TRACKING>
+  <!-- one job, standard status -->
+  <SUPPLIER>
+    <ACCOUNT>
+      <ITEM Status="15" Type="RX" Tracking_Id="272987" Visionweb_Tracking_Id="RX44J1S8" Received_at="2022-01-26T02:12:55" Estimated_Delivery="2022-01-26T02:12:55" />
+    </ACCOUNT>
+  </SUPPLIER>
+  <!-- one job, custom status -->
+  <SUPPLIER>
+    <ACCOUNT>
+      <ITEM Status="999" Type="RX" Tracking_Id="272987" Visionweb_Tracking_Id="RX44J1S8" Received_at="2022-01-26T03:15:55" Estimated_Delivery="2022-01-26T02:12:55">
+        <STATUS_DESCRIPTION>Re do</STATUS_DESCRIPTION>
+      </ITEM>
+    </ACCOUNT>
+  </SUPPLIER>
+  <!-- one job, multiple status -->
+  <SUPPLIER>
+    <ACCOUNT>
+      <ITEM Status="15" Type="RX" Tracking_Id="272987" Visionweb_Tracking_Id="RX44J1S8" Received_at="2022-01-26T02:12:55" Estimated_Delivery="2022-01-26T02:12:55" />
+      <ITEM Status="25" Type="RX" Tracking_Id="272987" Visionweb_Tracking_Id="RX44J1S8" Received_at="2022-01-26T02:13:55" Estimated_Delivery="2022-01-26T02:12:55" />
+      <ITEM Status="999" Type="RX" Tracking_Id="272987" Visionweb_Tracking_Id="RX44J1S8" Received_at="2022-01-26T03:15:55" Estimated_Delivery="2022-01-26T02:12:55">
+        <STATUS_DESCRIPTION>Re do</STATUS_DESCRIPTION>
+      </ITEM>
+    </ACCOUNT>
+  </SUPPLIER>
+</VW_TRACKING>

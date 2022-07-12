@@ -1,0 +1,10 @@
+## WARNING: This file stop deployment errors for node containers by preventing the "COPY". It needs to be in the context directory to work!
+## Critical folders
+app/*/.next
+app/*/build
+app/*/node_modules
+
+## Git files
+app/*/.git*
+app/*/*/.git*
+app/*/*/*/.git*
