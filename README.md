@@ -5,9 +5,22 @@
 - Git: changing names in local files/folders from mayusc/minusc makes the online repo to ignore the change. To avoid this, change to an alternate name, commit and then change it back to the wanted name
 - "config/crontab_custom.conf", lines 3 & 4 needs to be uncommented for production
 
-## Disclaimer: (Español)
+## Disclaimer: Español
 
-- Este proyecto fue realizado para conectar un e-commerce con los distintos sistemas legacy erp de latam. NO vas a poder testear el consumo de xml mediante sftp/ftp (necesitas las claves originales para ello), pero si podrás probar la api rest y el frontend.
+- Este proyecto fue realizado para conectar un e-commerce con los distintos sistemas legacy erp de latam. He deshabilitado el contenedor de tareas programadas, por lo que no vas a poder probar el consumo de xml mediante sftp/ftp (necesitarías las claves de los repositorios originales para ello), pero si podrás probar la api rest y el frontend.
+
+## Uso
+
+- link client: http://localhost/
+- link api: http://localhost/alvion-api/
+- descarga, instala y arranca docker desktop: https://www.docker.com/get-started/
+- prueba la aplicación con los siguientes comandos (recordar renombrar el archivo sample.env a .env):
+
+      iniciar app - ` docker-compose up -d app `
+
+      crear base de datos - ` docker exec --user=node alvion_server_1 bash -c "npm run knex:reset" `
+
+      destruir app - ` docker-compose down -v `
 
 ## Flujo Tareas Programadas
 
